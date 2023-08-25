@@ -1,9 +1,23 @@
+window.addEventListener('DOMContentLoaded',() =>{
+    displayCocktails();
+})
+
+// Add a "keyup" event listener to the search input
 const form = document.querySelector('#search-form')
-const userInput = form.querySelector('.input-field').value;
+const inputField = form.querySelector('.input-field');
+inputField.addEventListener('keyup', function() {
+    const userInput = inputField.value.toLowerCase(); 
 
-// form.addEventListener('submit', displayCocktails)
+    // Filter the drinksArray based on user input
+    let filteredCocktails = drinksArray.filter(drink => 
+        drink.strDrink.toLowerCase().includes(userInput)
+    );
 
-// function displayCocktails(){
+    // Display the filtered cocktails
+    displayCocktails(filteredCocktails);
+});
+
+function displayCocktails(){   
     fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=a',{
         headers:{
             'Accept': 'application/json'
@@ -11,16 +25,16 @@ const userInput = form.querySelector('.input-field').value;
     }).then((response) => {
         return response.json();
     }).then((data) => {
-        console.log(data)
         const drinksArray = data.drinks;
       let cocktailsContainer = drinksArray.map((cocktail) =>{
         return`
         <article class="cocktail">
-        <img src="${cocktail.drink}" class="image">    
+        <img src="${cocktail.strDrinkThumb}" class="image">    
 <p class="cocktail-name">${cocktail.strDrink}</p>
     </article>
     `
       })
       document.querySelector('.cocktails-container').innerHTML = cocktailsContainer.join('')
     })
-// }
+}
+
