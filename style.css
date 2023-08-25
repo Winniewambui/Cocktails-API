@@ -60,6 +60,20 @@ outline: none;
     bottom: 10px;
     right: 5px;
 }
+@media screen and (max-width:1024px){
+    .cocktails-container{
+        padding: 0 25px;
+        grid-template-columns: repeat(2, 1fr);
+        gap:10px;
+        margin-top:50px;
+        padding: 10px 30px;
+    }
+    .image{
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+}
+}
 @media screen and (max-width:786px){
     .header-section{
         height: 6rem;
@@ -80,8 +94,8 @@ outline: none;
         margin-top:50px;
     }
     .image{
-        width: 350px;
-        height: 300px;
+        width: 300px;
+        height: 250px;
         border-radius: 10px;
     }
     .cocktail-name{
