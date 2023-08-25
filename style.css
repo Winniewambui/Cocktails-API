@@ -6,6 +6,9 @@
 body{
     background-color: rgb(232, 247, 242);
 }
+main{
+    flex-wrap: wrap;
+}
 .header-section{
     display: flex;
     flex-direction: column;
@@ -107,19 +110,19 @@ outline: none;
 @media screen and (max-width:480px){
     .header-section{
         height: 6rem;
-        margin-top: 4em;
+        margin-top: 3em;
     }
     h1{
-        font-size: 4em;
+        font-size: 2em;
     }
     .input-field{
-    padding: 10px 50px;
-    width: 30em;
+    padding: 10px 40px;
+    width: 28em;
     margin-bottom: 25px;
     border-radius: 20px;
     }
     .input-field::placeholder{
-        font-size: 20px;
+        font-size: 10px;
         color: rgb(156, 160, 161);
     }
     .cocktails-container{
@@ -129,7 +132,7 @@ outline: none;
         margin-top:30px;
     }
     .image{
-        width: 300px;
+        width: 280px;
         height: 250px;
         border-radius: 10px;
     }
