@@ -113,16 +113,16 @@ outline: none;
         margin-top: 3em;
     }
     h1{
-        font-size: 2em;
+        font-size: 3em;
     }
     .input-field{
     padding: 10px 40px;
-    width: 28em;
+    width: 20em;
     margin-bottom: 25px;
     border-radius: 20px;
     }
     .input-field::placeholder{
-        font-size: 10px;
+        font-size: 15px;
         color: rgb(156, 160, 161);
     }
     .cocktails-container{
