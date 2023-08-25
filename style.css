@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(232, 247, 242);
+}
+.header-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+}
+h1{
+    font-size: 4em;
+}
+.input-field{
+padding: 10px 40px;
+width: 40em;
+margin-top: 20px;
+background-color: rgb(252, 252, 252);
+border-radius: 10px;
+border: none;
+}
+.input-field::placeholder{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(191, 200, 202);
+}
+
+.cocktails-container{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
+    margin-top:50px;
+}
+.cocktail{
+    position: relative;
+    margin-bottom: 20px;
+}
+.image{
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+}
+.cocktail-name{
+    font-size: 24px;
+    font-weight: 600;
+    background-color: rgb(221, 226, 226,0.3);
+    border-radius: 10px;
+    padding: 5px 5px;
+    object-fit: contain;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+}
